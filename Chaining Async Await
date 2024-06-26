@@ -1,0 +1,24 @@
+async function firstAsyncFunction() {
+  await delay(1000);
+  console.log('First async function called');
+}
+
+async function secondAsyncFunction() {
+  await delay(1000);
+  console.log('Second async function called');
+}
+
+async function thirdAsyncFunction() {
+  await delay(1000);
+  console.log('Third async function called');
+}
+
+async function chainedAsyncFunctions() {
+  await firstAsyncFunction();
+  await secondAsyncFunction();
+  await thirdAsyncFunction();
+}
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
